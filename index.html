@@ -2,73 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Code & Chai</title>
-        <style>
-            body {
-                  font-family: Arial, sans-serif;
-                        margin: 0;
-                              padding: 0;
-                                    background: #fffaf5;
-                                          color: #3b2f2f;
-                                                text-align: center;
-                                                    }
-                                                        header {
-                                                              background: #6b4226;
-                                                                    color: white;
-                                                                          padding: 20px;
-                                                                              }
-                                                                                  header h1 {
-                                                                                        margin: 0;
-                                                                                              font-size: 2.2rem;
-                                                                                                  }
-                                                                                                      nav {
-                                                                                                            margin: 15px 0;
-                                                                                                                }
-                                                                                                                    nav a {
-                                                                                                                          margin: 0 15px;
-                                                                                                                                text-decoration: none;
-                                                                                                                                      color: #6b4226;
-                                                                                                                                            font-weight: bold;
-                                                                                                                                                }
-                                                                                                                                                    nav a:hover {
-                                                                                                                                                          text-decoration: underline;
-                                                                                                                                                              }
-                                                                                                                                                                  section {
-                                                                                                                                                                        padding: 40px 20px;
-                                                                                                                                                                            }
-                                                                                                                                                                                footer {
-                                                                                                                                                                                      background: #6b4226;
-                                                                                                                                                                                            color: white;
-                                                                                                                                                                                                  padding: 10px;
-                                                                                                                                                                                                        margin-top: 20px;
-                                                                                                                                                                                                            }
-                                                                                                                                                                                                              </style>
-                                                                                                                                                                                                              </head>
-                                                                                                                                                                                                              <body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code & Chai</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background: #fdf6e3; /* chai latte cream */
+      color: #2e2e2e;      /* coding grey */
+    }
+    header {
+      background: #c97b4d; /* chai brown */
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #4caf50; /* success green */
+    }
+    section {
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      color: #c97b4d;
+    }
+    h2 {
+      color: #4caf50;
+    }
+    footer {
+      background: #c97b4d;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    button {
+      background: #4caf50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #43a047;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>☕ Code & Chai 💻</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-                                                                                                                                                                                                                <header>
-                                                                                                                                                                                                                    <h1>Code & Chai</h1>
-                                                                                                                                                                                                                        <p>Welcome to my digital home — projects, blogs & ideas.</p>
-                                                                                                                                                                                                                          </header>
+  <section>
+    <h2>Welcome to my cozy coding corner ✨</h2>
+    <p>Hi, I’m Sakshi! Engineering student, chai enthusiast, and curious coder.  
+       This is where I share my projects, thoughts, and journey 🌸</p>
+    <button>Explore My Work</button>
+  </section>
 
-                                                                                                                                                                                                                            <nav>
-                                                                                                                                                                                                                                <a href="about.html">About Me</a>
-                                                                                                                                                                                                                                    <a href="projects.html">Projects</a>
-                                                                                                                                                                                                                                        <a href="blogs.html">Blogs</a>
-                                                                                                                                                                                                                                            <a href="contact.html">Contact</a>
-                                                                                                                                                                                                                                             </nav>
-                                                                                                                                                                            
-
-                                                                                                                                                                                                                                                <section>
-                                                                                                                                                                                                                                                    <h2>Hello, I’m Sakshi 👋</h2>
-                                                                                                                                                                                                                                                        <p>I’m an engineering student exploring coding, freelancing, and writing while enjoying my chai 😉.  
-                                                                                                                                                                                                                                                               This is where I share my projects and little pieces of my journey.</p>
-                                                                                                                                                                                                                                                                 </section>
-
-                                                                                                                                                                                                                                                                   <footer>
-                                                                                                                                                                                                                                                                       <p>© 2025 Code & Chai | Made with ❤️ by Sakshi</p>
-                                                                                                                                                                                                                                                                         </footer>
-
-                                                                                                                                                                                                                                                                         </body>
-                                                                                                                                                                                                                                                                         </html>
+  <footer>
+    <p>© 2025 Code & Chai | Brewed with ☕ & 💻 on GitHub Pages</p>
+  </footer>
+</body>
+</html>
