@@ -2,17 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Blogs | Code & Chai </title>
-        <style>
-            body { font-family: Arial, sans-serif; background:#fffaf5; color:#3b2f2f; text-align:center; padding:20px; }
-                a { color:#6b4226; font-weight:bold; text-decoration:none; }
-                  </style>
-                  </head>
-                  <body>
-                    <h1>Blogs</h1>
-                      <p>This is my space to write about coding, freelancing, and life as a student 🌸.  
-                           (I can add links to each blog post here.)</p>
-                             <p><a href="index.html">⬅ Back to Home</a></p>
-                             </body>
-                             </html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Code & Chai</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfaf6;
+      color: #2c2c2c;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #4e342e;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 { margin: 0; font-size: 1.8rem; }
+    nav { margin-top: 10px; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    nav a:hover { color: #d7ccc8; }
+
+    main { padding: 40px 20px; max-width: 900px; margin: auto; }
+    h2 { color: #4e342e; margin-bottom: 20px; }
+
+    .blog-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .blog-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .blog-card h3 { margin-top: 0; color: #4e342e; }
+    .blog-card p { margin-bottom: 10px; }
+
+    .button {
+      background-color: #8d6e63;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #d7ccc8;
+      color: #2c2c2c;
+    }
+
+    footer {
+      background-color: #4e342e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>☕ Code & Chai 💻</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="blogs.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>📝 My Blog Posts</h2>
+      <div class="blog-container" id="blogContainer"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Code & Chai | Built with ❤️ by Sakshi</p>
+  </footer>
+
+  <script>
+    // Replace with your RSS feed URL
+  const feedUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://dev.to/feed/pawarsakshi777";
+
+    fetch(feedUrl)
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('blogContainer');
+        data.items.forEach(item => {
+          const card = document.createElement('div');
+          card.className = 'blog-card';
+          card.innerHTML = `
+            <h3>${item.title}</h3>
+            <p>${item.description.replace(/(<([^>]+)>)/gi,"").substring(0, 120)}...</p>
+            <a href="${item.link}" target="_blank" class="button">Read More</a>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(err => console.error("Error fetching feed:", err));
+  </script>
+</body>
+</html>
