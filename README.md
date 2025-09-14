@@ -1,7 +1,7 @@
-# 🌸 The Brownie Girl – Personal Website
+# 🌸 Code & Chai – Personal Website
 
 ## 📌 About
-Welcome to my personal website, **The Brownie Girl**!  
+Welcome to my personal website, **Code & Chai **!  
 This is a minimalist and modern space where I share about myself, my projects, and my blogs.  
 
 It’s designed with warm chocolate-brown and cream colors to reflect my style. ✨
